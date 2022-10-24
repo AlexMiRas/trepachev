@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игра угадай ячейку</title>
+    <style>
+      .content {
+        margin: 0 auto;
+        margin-left: 100px;
+      }
+      .tbl {        
+        border: 3px solid goldenrod;
+        width: 450px;
+        height: 450px;
+      }
+      .table {
+        margin: 0 auto;       
+      }
+      .table td {
+        border: 1px solid black;
+        width: 38px;
+        height: 38px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>Игра угадай ячейку</h2>
+      <div class="tbl">
+        <table id="table" class="table"></table>
+      </div>
+      <p id="par"></p>
+      <p id="counter">Количество попыток: <span></span></p>
+      <p id="counter1">Количество удачных попыток: <span></span></p>
+      <p id="time">Осталось времени: <span></span></p>
+    </div>
+
+    <script src="./index2.js"></script>
+  </body>
+</html>
