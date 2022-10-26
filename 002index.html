@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реализуем экранную клавиатуру</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin-top: 10px;
+            text-align: center;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        td {
+            border: 1px black solid;
+            color: white;
+            background-color: rgb(68, 13, 13);
+            width: 30px;
+            text-align: center;
+            font-size: 1.5rem;            
+        }
+        .content{
+            margin: 0 auto;
+            margin-left: 20px;;
+        }
+        .space{
+            
+        }
+        .btn{
+            border: 1px black solid;
+            background-color: rgb(68, 13, 13);
+            color: white;
+            text-align: center;
+            width: 200px;
+            height: 30px;
+        }
+
+        .input{
+            width: 500px;
+        }
+
+    
+
+    </style>
+  </head>
+  <body>
+    <div class="content">
+        <h1>Экранная клавиатура</h1>
+      <input id="inp" class="input" />
+
+        <div class="english">
+            <p>Латиница</p>
+        </div>
+        <div class="russian">
+            <p>Кириллица</p> 
+        </div>
+        <div class="numbers">
+            <p>Цифры</p> 
+        </div>
+        <div class="symbols">
+            <p>Символы</p> 
+        </div>
+        <div class="space">
+            <p>Пробел</p> 
+            <button id="btn" class="btn">Space / Пробел</button>
+            <button id="delete" class="btn">Backspace / Удалить</button>
+            <button id="capslock" class="btn">Capslock / Верхний регистр</button>
+            </button>
+        </div>
+    </div>
+
+    <script src="002.js"></script>
+  </body>
+</html>

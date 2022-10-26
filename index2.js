@@ -6,20 +6,27 @@ let numTable = 0;
 let count = div.querySelector('#counter');
 let count1 = div.querySelector('#counter1');
 let timeRemains = div.querySelector('#time');
+let startBtn = div.querySelector('#start');
 
-//создаю таблицу
+    //создаю таблицу
 
-for(let i = 0; i < 10; i++){
-    let tr = document.createElement('tr');
-    
-    for(let j = 0; j < 10; j++){
-        let td = document.createElement('td');
-        numTable++;
-        td.textContent = numTable   ;
-        tr.appendChild(td);
+    for(let i = 0; i < 10; i++){
+        let tr = document.createElement('tr');
+        
+        for(let j = 0; j < 10; j++){
+            let td = document.createElement('td');
+            numTable++;
+            td.textContent = numTable   ;
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);    
     }
-    table.appendChild(tr);    
-}
+
+
+startBtn.addEventListener('click', function () {
+    //делаем ячейки белого цвета после нового начала игры
+
+
 
 let tds = document.querySelectorAll('td');// получаю элементы созданных ячеек
     tds = [...tds]; // разбиваю псевдомассив на элементы
@@ -49,30 +56,16 @@ let fullTds = [...tds, ...newArr]; // получаю полный массив �
 //cчетчики попыток
 let allCounter = 0;
 let counter = 0;
-let timer = 60;
+let timer = 20;
 
 //цикл для перебора псевдомассива и навешивания событий на тдэшки
 
 for (let td of fullTds){    
     td.addEventListener('click', func);
+    td.style.background = 'white';
 }
 
-for (let td of fullTds){
-    td.addEventListener('click', function startTimer (){
-        let timerId = setInterval(function (){
-            console.log(timer);
-            timer--;
-            timeRemains.firstElementChild.textContent = timer;
-            if(timer <= 0){
-                clearInterval(timerId);
-                for(let td of fullTds){
-                    timeRemains.firstElementChild.textContent = 'Время истекло';                
-                }                   
-            }
-        },1000);
-        this.removeEventListener('click', startTimer);   
-    });
-};
+
 
 //функция игры
     
@@ -96,52 +89,20 @@ function func(){
     }
 }  
 
-//функция запуска времени с первого клика
-
-function startTimer() {
-       
-}
-
-
-// let isFirst = true; 
-// function func1(){
-//     if (isFirst) {
-//      startTimer();
-// isFirst = false;
-// }
-
-
-
-
-    
-
-
-
-// // let arr = [1,2,3,4,5];
-
-
-// // function shuffleArr() {
-// //     result = [];
-// //     while(arr.length > 0) {
-// //         let random = getRandomInt(arr.length - 1, 0);
-// //         let elem = arr.splice(random, 1)[0];
-// //         result.push(elem);
-// //     }
-// //     return result;
-// // }
-
-// // function getRandomInt(max,min){
-// //     return Math.floor(Math.random() * (max - min + 1))  + min;
-// // }
-
-// // console.log(shuffleArr(arr));
-
-// // let a = 10;
-// // let timerId = setInterval(()=>{
-// //     console.log(a);
-// //     a--;
-// //     if(a < 1){
-// //         clearInterval(timerId);
-// //     }
-
-// // },1000);
+    //обнуляем переменные
+    allCounter = 0;
+    counter = 0;
+    timer = 20;
+    //запускаем таймер
+    let timerId = setInterval(function (){
+        console.log(timer);
+        timer--;
+        timeRemains.firstElementChild.textContent = timer;
+        if(timer <= 0){
+            clearInterval(timerId);
+            for(let td of fullTds){
+                timeRemains.firstElementChild.textContent = 'Время истекло';                
+            }                   
+        }
+    },1000);
+});
