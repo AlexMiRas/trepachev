@@ -24,9 +24,6 @@ let startBtn = div.querySelector('#start');
 
 
 startBtn.addEventListener('click', function () {
-    //делаем ячейки белого цвета после нового начала игры
-
-
 
 let tds = document.querySelectorAll('td');// получаю элементы созданных ячеек
     tds = [...tds]; // разбиваю псевдомассив на элементы
@@ -62,6 +59,7 @@ let timer = 20;
 
 for (let td of fullTds){    
     td.addEventListener('click', func);
+    //делаем ячейки белого цвета после нового начала игры
     td.style.background = 'white';
 }
 
