@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        .content{
+            margin: 0 auto;
+            margin-top: 2vw;
+            width: 80vw;
+            min-height: 10vw;
+            border: 2px solid gold;
+        }
+        .name-date{border: 3px solid blue;
+            margin: 0;
+            display:flex;
+            justify-content: space-between;
+            gap: 100px;
+        }
+
+        .calendar-list{
+            display: flex;
+            gap: 10px;
+        }
+        span{
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="content">
+        <div class="btns">
+            <button id="forward">вперёд</button>
+            <button id="back">назад</button>
+        </div>
+        <div class="name-date">
+            <p class="name-month">Текущий месяц: <span></span></p>
+            <p class="name-year">Текущий год: <span></span></p>
+            <p class="name-day">Текущий день: <span></span></p>
+        </div>
+        <div class="calendar">
+
+        </div>
+
+    </main>
+    <script src="calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Значение тегов</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+      }
+      .content {
+        width: 80vw;
+        min-height: 40vw;
+        margin: 0 auto;        
+      }
+      .inputs{border: 1px blue solid;        
+        height: 5vw;
+        width: 16vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;       
+      }
+      .input {border: 1px red solid;
+        margin-top: 5px;
+        width: 200px;
+      }
+      .btn {border: 1px green solid; 
+        border-radius: 10px;       
+        width: 150px;
+        font-size: 0.75rem;
+        margin-top: 5px;
+        font-weight: 900;
+      }
+      .btn:active{
+        opacity: .45;
+      }
+    </style>
+  </head>
+  <body>
+
+    <main class="content">
+      <div class="inputs">
+        <input id="inp" class="input" />
+        <button id="search" class="btn">Описание тегов</button>
+      </div>
+      <div>
+        <p class="par">Описание тега: <span></span></p>
+      </div>
+    </main>
+
+    <script src="./tagName.js"></script>
+  </body>
+</html>
