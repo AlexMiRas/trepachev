@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск исторических дат</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+        }
+        td{
+            border: 1px solid black;
+            margin: 2px;
+        }
+        .td1{
+            width: 150px;
+        }
+        .td2{
+            width: 200px;
+        }
+        .page{
+            margin: 0 auto;
+            margin-top: 2vw;
+            width:80vw;
+            min-height: 20vw;
+        }
+        .inps{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    </style>
+</head>
+<body class="page">
+
+    <main class="content">
+        <div>
+            <h1 class="content__title">Поиск исторических дат</h1>
+        </div>
+        <div class="inps">
+            <p>Введите дату</p>
+            <input id="inp" />
+            <div class="par"></div>            
+        </div>
+    </main>
+    
+    <script src="./hystory.js"></script>
+</body>
+</html>
